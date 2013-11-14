@@ -1,0 +1,9 @@
+<h1> Listing of all the users </h1>
+			<% @user.each do |user| %>
+					<%= user.email %>
+					<%=user.name   %>
+					<%= link_to 'Show User',user %>
+					<%= link_to 'Edit User',edit_user_path(user) %>
+					<%= link_to 'Delete User' ,user_path(user),method: :delete %>
+					<br>
+			<%end%>
